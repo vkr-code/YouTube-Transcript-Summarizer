@@ -1,0 +1,17 @@
+{
+    "name": "YouTube Video Summarizer",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "browser_action":{
+        "default_popup": "index.html",
+        "default_icon": "logo64.png"
+    },
+    "description": "Get quick summarized transcript of your video!",
+    "icons": {
+        "128": "logo.jpg",
+        "64": "logo64.png"
+    },
+    "permissions": ["activeTab"]
+    
+
+}
