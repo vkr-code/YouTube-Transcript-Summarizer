@@ -1,11 +1,11 @@
 import tsum
-import eel
+#import eel
 
-eel.init('web')
+#eel.init('web')
 
 from youtube_transcript_api import YouTubeTranscriptApi
 
-@eel.expose
+#@eel.expose
 def getCaption():
     outls =[]
     tx = YouTubeTranscriptApi.get_transcript('aZkG0b6oi4s')
