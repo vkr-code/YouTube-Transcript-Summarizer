@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Tube Video Summarizer</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="flex items-center justify-between">
+                <div class="left flex items-center">
+                    <div class="branding">
+                        <img src="./image/text summurizer.png" />
+                    </div>
+                    <div>
+                        <a href="#home">HOME</a>
+                        <a href="#about ">About Summarizer</a>
+                        <a href="#technique ">Technique Used</a>
+                        <a href="#summarizer">Video Summarizer</a>
+
+                    </div>
+                </div>
+                
+            </nav>
+            <div id="home" class="hero flex items-center justify-between">
+                <div class="left flex-1">
+                    <img src="./image/youtube icon 1 .png" />
+                </div>
+                <div class="right flex-1">
+                    <h5>Welcome!</h5>
+                    <h1>Youtube Video Summarizer</h1>
+                    <h2>9.6 Million</h2>
+                    <p>People are studying online and require reliable content summarizer. 
+                    This Video Transcript Summarizer can help them to save their time and 
+                    thereby increase their own productivity.</p>
+                    <div>
+                        <a href="#use">
+                             <button class="btn btn-secondary">How to use Summarizer</button>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+    <section id="about" class="about flex">
+        <div class="container flex items-center">
+            <div >
+                <img src="./image/nltk.png" />
+            </div>
+            <div  class=" right flex-1">
+                <h1>About Summarizer</h1>
+                <p>Two ways of text summarisation: extractive and abstractive. In extractive text summarisation we extract important tokens as sentences from the text and arrange them together, whereas in abstractive we generate a summary that keeps original intent in our own language . But here we have worked upon two extractive based algorithms.</p>
+                <h3>Abstractive Summarization</h3>
+                <p>
+                    When a model gives completely different output text as compared to
+                    original text or we can say that it produces a new sentence to get the summary
+                </p>
+                <h3>Extractive Summarization</h3>
+                <p>When model extracts valuable tokens/phrases and sentences as output from the original text.Two algorithms we have implemented till now both depend on extractive methodologies. The algorithms we have covered in the project  are NLTK and SPACY</p>
+            </div>
+        </div>
+    </section>
+    <section id="technique" class="services flex items-center">
+        <div class="container">
+            <h1>Technique Used</h1>
+            <h2> FLOW CHART</h2>
+            <div class="project">
+                <img src="./image/project flow.png" />
+            </div>
+        </div>
+    </section>
+    <section class="left flex">
+        <div class="container flex items-center">
+            <div class="algo ">
+                <img src="./image/algorithm.png" />
+            </div>
+
+            <div class="right flex-1 ">
+                <h1>Algorithms Used</h1>
+
+                <h2>NLTK</h2>
+                <p>
+                    NLTK stands for natural languages toolkit.
+                    Programs for symbolic and statistical natural Language Processing
+                    Lexical analysis: Word and Text Tokenizer
+                    N-gram and Collocation
+                    Part of speech tagger
+                    Named entity recognition.
+                </p>
+                <h2>SPACY</h2>
+                <p>spaCy used in NLP projects acts as a one-stop-shop for various tasks, example Tokenization, (POS) tagging, </p>
+                <h2>SUMMY</h2>
+                <p>Sumy is able to create extractive summary. That means that it tries to find the most significant sentences in the document(s) and compose it into the shortened text</p>
+            </div>
+        </div>
+    </section>
+    <section id="use" class="Use">
+        <div class="heading items-center ">
+            <h1>How To Use This Summarizer</h1>
+        </div>
+        <div class="steps container flex-1 items-center">
+            <h3>STEP 1:</h3>
+            <p>Provide the URL of the video for which you want the Summary</p>
+            <h3>STEP 2:</h3>
+            <p>Select the Algorithm that ypu want to use in Summarizer. If you don't have knowledge you can select spacy for best result :)</p>
+            <h3>STEP 3:</h3>
+            <p>Provide the length percentage till you want to summarize.</p>
+            <h3>STEP 4:</h3>
+            <p>Click on Summarize button</p>
+            <h3>STEP 5:</h3>
+            <p> If you want to download the file you can click on download button</p>
+
+        </div>
+    </section>
+    <section id="summarizer" class="form items-center">
+                <h1>YouTube Video Summarizer</h1>
+            <div class="video items-center">
+                <label>Enter your url here</label>
+                <br>
+                <input type="url" id="url" placeholder="https://www.youtube.com/results?search_query=youtube">
+            </div>
+            <br>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Choose summarization algorithm</label>
+                <br>
+            </div>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Default</option>
+                <option value="1">NLTK</option>
+                <option value="2">spaCy</option>
+                <option value="3">Sumy</option>
+            </select>
+            <br>
+            <br>
+            <label class="l1 form-label" for="customRange1" >Select length of summary</label>
+            <br>
+            <input type="range" class="form-range" id="customRange1">
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary" id="summarize">Summarize</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary">Download</button>
+        
+    </section>
+    
+</body>
+</html>
