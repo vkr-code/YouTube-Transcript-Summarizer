@@ -131,27 +131,69 @@
                 <label for="exampleFormControlInput1" class="form-label">Choose summarization algorithm</label>
                 <br>
             </div>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Default</option>
+            <select class="form-select" aria-label="Default select example" id="select1">
+                <option value="2" selected>Default</option>
                 <option value="1">NLTK</option>
                 <option value="2">spaCy</option>
                 <option value="3">Sumy</option>
+                <option value="4">Gensim</option>
             </select>
-            <div>
             <br>
             <br>
-            <label class="l1 form-label" for="customRange1" >Select length of summary</label>
-            <br>
-            <input type="range" class="form-range" id="customRange1">
-            <br>
-            <br>
-            <button type="button" class="btn btn-primary" id="summarize">Summarize</button>
+            <div class="form-group">
+                <label for="range_size" style="color:rgb(255, 255, 255);">
+                    Select length of summary :
+                </label>
             <br>
             <br>
-            <button type="button" class="btn btn-primary"><a href='download.html' alt='download your summary here.'>Download</a> </button>
-        </div>
+                <input type="range" class="form-range" id="range_size" min="30" max="80" name="percent">
+                <br>
+                <label style="color:rgb(255, 255, 255); margin-left:5%">
+                Size:
+                <span id="value_size"></span></label>
+            </div>
+            <script>
+                var slider = document.getElementById("range_size")
+                var output = document.getElementById("value_size")
+            
+                output.innerHTML = slider.value  + "%";
+                slider.oninput = function() {
+                output.innerHTML = this.value + "%" ;
+                    
+            }
+            </script> 
+            <br>
+            <br>
+            <button type="button"  onclick="getOption()" class="btn btn-primary" id="summarize">Summarize</button>
+            
+            <script type="text/javascript">
+                function getOption() {
+                    selectElement = document.querySelector('#select1');
+                    algo = selectElement.value;
+                    selectlen = document.querySelector('#range_size');
+                    x = selectlen.value;
+                    switch(algo) {
+                        case "1":
+                            window.open('https://transcript-summarizer-project.herokuapp.com/usingNLTK/' + x);
+                            break;
+                        case "2":
+                            window.open('https://transcript-summarizer-project.herokuapp.com/usingSpacy/' + x);
+                            break;
+                        case "3":
+                            window.open('https://transcript-summarizer-project.herokuapp.com/usingSumy/' + x);
+                            break;
+                        case "4":
+                            window.open('https://transcript-summarizer-project.herokuapp.com/usingGensim/' + x);
+                        }
+                }
+            </script>
+
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary">Download</button>
+        
+
     </section>
-    
     
 </body>
 </html>
