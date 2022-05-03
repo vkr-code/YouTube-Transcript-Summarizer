@@ -16,13 +16,55 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    -webkit-font-smoothing; antialiased;
+    -webkit-font-smoothing: antialiased;
 }
 header {
     background: var(--dark);
     height: 800px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 80%, 0 100%);
 }
+
+textarea{
+    /* display: flex; */
+    display: block;
+    margin-left: 50%;
+    margin-right: 10%;
+    text-align: justify;
+    background: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+    width: 50%;
+    height: 250px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+    padding-right: 50%;
+}
+
+input{
+    display:block;
+    margin-left: 50%;
+    margin-right: 50%;
+    padding: 0.8rem 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+
+.downImg{
+        height: 100px;
+        width: 80px;
+       
+}
+
 
 .container {
     max-width: 1152px;
